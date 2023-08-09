@@ -29,7 +29,7 @@ pipeline {
             dir('target')
             steps {
                 bat './jenkins/scripts/deliver.bat'
-                deploy adapters: [tomcat9(credentialsId: '167cb693-7531-4239-a861-d69ec6b5f0e8', path: '', url: 'http://localhost:88/')], contextPath: 'C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: '167cb693-7531-4239-a861-d69ec6b5f0e8', path: '', url: 'http://localhost:88')], contextPath: 'C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps', war: '**/*.war'
             }
         }
     }
